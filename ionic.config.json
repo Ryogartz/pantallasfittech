@@ -1,0 +1,7 @@
+{
+  "name": "nuevoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

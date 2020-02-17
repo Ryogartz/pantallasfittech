@@ -1,0 +1,44 @@
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+
+  ion-item {
+    --highlight-color-valid:none !important;
+  }
+  
+
+  .swiper-slide {
+    display: block;
+  }
+
+  ion-slide > h2 {
+    margin-top: 1.8rem;
+  }
+
+  ion-slide > img {
+    max-height: 50%;
+    max-width: 60%;
+    margin: 36px 0;
+  }
+
+  .img-avatar{
+    max-width:50px;
+    max-height:50px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.progreso{
+  margin: 0 auto;
+ width: 70%;
+}
+
+.mensaje{
+  margin: 30px;
+}
+

@@ -1,0 +1,226 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Primeros pasos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    
+    <ion-slide>
+        <img  class="logo" src="./assets/img/logo.jpg"/>
+        <h2 style="margin-top: 0px!important;">Bienvenido a <b>FitTeach</b></h2>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">      
+              <ion-card mode="ios" (click)="genero(1)">
+                <img src="./assets/img/male.png"  class="img-avatar"/>
+                <ion-card-content>
+                  Hombre
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card mode="ios" (click)="genero(0)">
+                <img src="./assets/img/female.png" class="img-avatar"/>
+                <ion-card-content>
+                  Mujer
+                </ion-card-content>
+              </ion-card> 
+            </ion-col>
+          </ion-row>
+        </ion-grid>      
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Paso 2</h2>
+      <ion-progress-bar value="0.2" class="progreso"></ion-progress-bar>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+
+          <ion-card mode="ios">
+            <ion-card-content>
+              <ion-item>
+                <ion-label>Objetivo</ion-label>
+                <ion-select>
+                  <ion-select-option value="0">get fit</ion-select-option>
+                  <ion-select-option value="1">Gain muscle</ion-select-option>
+                  <ion-select-option value="2">fat burning</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-card-content>
+
+            <ion-card-content>
+              <ion-item>
+                <ion-label>Nivel de actividad</ion-label>
+                <ion-select >
+                  <ion-select-option value="0">sedentario</ion-select-option>
+                  <ion-select-option value="1">ligero </ion-select-option>
+                  <ion-select-option value="2">moderado</ion-select-option>
+                  <ion-select-option value="3">activo</ion-select-option>
+                  <ion-select-option value="4">muy activo</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-card-content>
+          
+            <ion-card-content>
+              <ion-item >
+                <ion-label>Experiencia</ion-label>
+                <ion-select>
+                  <ion-select-option value="0">sin experiencia</ion-select-option>
+                  <ion-select-option value="1">entre 6 meses </ion-select-option>
+                  <ion-select-option value="2">mas de 2 años</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-card-content>
+
+            <ion-card-content>
+              <ion-item >
+                <ion-label>Donde entrenaras</ion-label>
+                <ion-select>
+                  <ion-select-option value="0">Gym</ion-select-option>
+                  <ion-select-option value="1">outdoor</ion-select-option>
+                  <ion-select-option value="2">Casa</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+
+          <ion-button fill="clear" (click)="avanzar(2)" [disabled]="disabled">Siguiente <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Paso 3</h2>
+      <ion-progress-bar value="0.4" class="progreso"></ion-progress-bar>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+        <ion-card mode="ios" class="centrarTarjeta">
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Edad</ion-label>
+              <ion-select>
+                <ion-select-option value="0">18-25</ion-select-option>
+                <ion-select-option value="1">26-35</ion-select-option>
+                <ion-select-option value="2">36-45</ion-select-option>
+                <ion-select-option value="3">46-55</ion-select-option>
+                <ion-select-option value="4">56-65</ion-select-option>
+                <ion-select-option value="5">mas de 65</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-card-content>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Estatura</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+          </ion-card-content>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Peso</ion-label>
+              <ion-input 
+              inputmode="decimal" 
+              type="tel"
+              ></ion-input>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-button fill="clear" (click)="avanzar(3)" [disabled]="disabled">Siguiente <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-row>
+      </ion-grid>  
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Paso 4</h2>
+        <ion-progress-bar value="0.6" class="progreso"></ion-progress-bar>
+        <ion-card-content>
+          <ion-list>
+              <ion-item>
+                <ion-label>patologias cardiacas</ion-label>
+                <ion-select >
+                  <ion-select-option value="aritmias">aritmias</ion-select-option>
+                  <ion-select-option value="taquicardia">taquicardia</ion-select-option>
+                  <ion-select-option value="insuficienciacardiaca">insuficiencia cardiaca</ion-select-option>
+                  <ion-select-option value="infartos">infartos</ion-select-option>
+                  <ion-select-option value="soplocorazon"> soplo en el corazon</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>enfermedades pulmonales</ion-label>
+                <ion-select>
+                  <ion-select-option value="1">influenza</ion-select-option>
+                  <ion-select-option value="1">asma</ion-select-option>
+                  <ion-select-option value="1">bronquitis</ion-select-option>
+                  <ion-select-option value="1"> enfermedad pulmonar obstructiva cronica</ion-select-option>
+                  <ion-select-option value="1"> hipertension pulmonar</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>hipertension</ion-label>
+                <ion-checkbox mode="ios" color="primary"slot="end"></ion-checkbox>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>hipotension</ion-label>
+                <ion-checkbox  mode="ios" color="primary" slot="end"></ion-checkbox>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>desvanecimiento</ion-label>
+                <ion-checkbox  mode="ios" color="primary" slot="end"></ion-checkbox>
+              </ion-item>
+      
+              <ion-item>
+                <ion-label>diabete insulinodependiente</ion-label>
+                <ion-checkbox mode="ios" color="primary"  slot="end"></ion-checkbox>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>dolores en el pecho </ion-label>
+                <ion-checkbox mode="ios" color="primary" slot="end"></ion-checkbox>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>fatiga inusual en actividades </ion-label>
+                <ion-checkbox mode="ios" color="primary"  slot="end"></ion-checkbox>
+              </ion-item>
+
+              <ion-item>                     
+                <ion-label>no presento ninguna anterior </ion-label>
+                <ion-checkbox  mode="ios" color="primary" slot="end"></ion-checkbox>
+              </ion-item>
+          </ion-list>
+          <ion-button fill="clear" (click)="avanzar(4)" [disabled]="disabled">Siguiente<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+        </ion-card-content>
+    </ion-slide>
+
+    <ion-slide>
+        <h2>Paso 5</h2>
+        <ion-progress-bar value="0.6" class="progreso"></ion-progress-bar>
+
+        <h2>Comienza a cambiar tu vida</h2>
+          <p class="mensaje"><b>Ionic Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Paso 6</h2>
+      <ion-progress-bar value="0.8" class="progreso"></ion-progress-bar>
+
+      <img class="logo3" src="./assets/img/trato.png" />
+        <h2 style="margin-top: 0px!important;">Acepta las condiciones </h2>
+      <p class="mensaje"><b>Ionic Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+      <h2>Ready to Play?</h2>
+      <ion-button fill="clear" (click)="registrar()">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
